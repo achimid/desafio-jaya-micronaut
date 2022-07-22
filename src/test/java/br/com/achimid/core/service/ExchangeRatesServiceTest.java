@@ -13,12 +13,12 @@ import static io.micronaut.core.util.StringUtils.TRUE;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @MicronautTest
+@SuppressWarnings("MethodName")
 @Requires(property = "mockito.test.enabled", defaultValue = FALSE, value = TRUE)
 class ExchangeRatesServiceTest {
 
     @Inject
     ExchangeRatesService exchangeRatesService;
-
 
     @Test
     void should_test_rate() {
@@ -31,6 +31,5 @@ class ExchangeRatesServiceTest {
     LayerApiClient mathService() {
         return Mockito.mock(LayerApiClient.class);
     }
-
 
 }
