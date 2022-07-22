@@ -65,3 +65,6 @@ micronaut {
         annotations("br.com.achimid.*")
     }
 }
+
+task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
