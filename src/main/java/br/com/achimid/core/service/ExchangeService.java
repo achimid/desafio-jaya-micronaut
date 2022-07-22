@@ -2,7 +2,6 @@ package br.com.achimid.core.service;
 
 import br.com.achimid.core.domain.exchange.ExchangeEntity;
 import br.com.achimid.infra.repository.ExchangeRepository;
-import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

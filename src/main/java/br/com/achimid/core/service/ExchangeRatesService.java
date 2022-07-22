@@ -3,7 +3,6 @@ package br.com.achimid.core.service;
 import br.com.achimid.infra.client.LayerApiClient;
 import io.micronaut.cache.annotation.CacheConfig;
 import io.micronaut.cache.annotation.Cacheable;
-import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
