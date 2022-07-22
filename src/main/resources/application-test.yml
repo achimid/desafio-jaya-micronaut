@@ -1,0 +1,47 @@
+micronaut:
+  server:
+    port: -1
+  application:
+    name: desafio-jaya-micronaut
+
+  # EhCache
+  caches:
+    api-layer-client:
+      expire-after-write: 1m
+
+  # Swagger configuration
+  router:
+    static-resources:
+      swagger:
+        paths: classpath:META-INF/swagger
+        mapping: /swagger/**
+      swagger-ui:
+        paths: classpath:META-INF/swagger/views/swagger-ui
+        mapping: /swagger-ui/**
+
+# Datasource
+datasources:
+  default:
+    url: jdbc:h2:mem:devDb;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ''
+    schema-generate: CREATE_DROP
+    dialect: H2
+jpa.default.properties.hibernate.hbm2ddl.auto: update
+
+netty:
+  default:
+    allocator:
+      max-order: 3
+
+#Swagger
+swagger-ui:
+  enabled: true
+
+# Layer API Integration
+layer-api:
+  base-url: https://api.apilayer.com
+  auth:
+    apiKey: apiKey
+    secret: wuNWlVcTi4y6m6YryL1Qt7b07whVMVcY
