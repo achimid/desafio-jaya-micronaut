@@ -15,7 +15,7 @@ jobs:
           distribution: 'adopt'
 
       - name: Running Checkstyle
-        run: ./gradlew check
+        run: ./gradlew clean checkstyleMain checkstyleTest
 
   test:
     runs-on: ubuntu-latest
@@ -30,7 +30,7 @@ jobs:
           distribution: 'adopt'
 
       - name: Running Checkstyle
-        run: ./gradlew test
+        run: ./gradlew test --no-daemon -x checkstyleTest -x checkstyleMain
 
   build:
     runs-on: ubuntu-latest
@@ -45,7 +45,7 @@ jobs:
           distribution: 'adopt'
 
       - name: Build with Gradle        
-        run: ./gradlew clean build -no-daemon -x checkstyleTest -x checkstyleMain -x test
+        run: ./gradlew clean build --no-daemon -x checkstyleTest -x checkstyleMain -x test
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
