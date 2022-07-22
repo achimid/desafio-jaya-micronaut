@@ -16,7 +16,6 @@
 ### Motivação das principais escolhas de tecnologias:
 
 
-
 ---
 ## Micronaut 3.5.3 Documentation
 
