@@ -33,7 +33,7 @@
 ---
 ## Aplicação hospedada no Heroku
 
-Endpoint para utilização: https://desafio-jaya-micronaut.herokuapp.com/api/v1/exchange
+Endpoint para utilização: https://desafio-jaya-micronaut.herokuapp.com/api/v1/exchange?userId=123
 
 Endereço da documentação: https://desafio-jaya-micronaut.herokuapp.com/swagger-ui
 
