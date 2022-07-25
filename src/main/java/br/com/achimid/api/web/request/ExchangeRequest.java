@@ -3,6 +3,7 @@ package br.com.achimid.api.web.request;
 import br.com.achimid.core.domain.CurrencyType;
 import com.fasterxml.jackson.annotation.JsonAlias;
 import io.micronaut.core.annotation.Introspected;
+import lombok.Builder;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
@@ -10,6 +11,7 @@ import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
 @Data
+@Builder
 @Introspected
 public class ExchangeRequest {
 

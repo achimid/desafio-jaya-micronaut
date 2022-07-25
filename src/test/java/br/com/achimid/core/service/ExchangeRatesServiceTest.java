@@ -1,12 +1,9 @@
 package br.com.achimid.core.service;
 
-import br.com.achimid.infra.client.LayerApiClient;
 import io.micronaut.context.annotation.Requires;
-import io.micronaut.test.annotation.MockBean;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
 import jakarta.inject.Inject;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 
 import static io.micronaut.core.util.StringUtils.FALSE;
 import static io.micronaut.core.util.StringUtils.TRUE;
@@ -25,11 +22,6 @@ class ExchangeRatesServiceTest {
         final var rates = exchangeRatesService.getRates();
 
         assertNotNull(rates);
-    }
-
-    @MockBean(LayerApiClient.class)
-    LayerApiClient mathService() {
-        return Mockito.mock(LayerApiClient.class);
     }
 
 }
