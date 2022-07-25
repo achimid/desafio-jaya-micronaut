@@ -66,5 +66,5 @@ micronaut {
     }
 }
 
-task stage(dependsOn: ['build', 'clean'])
-build.mustRunAfter clean
+task stage(dependsOn: ['assemble', 'clean'])
+assemble.mustRunAfter clean
