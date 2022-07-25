@@ -1,1 +1,1 @@
-web: java -jar build/libs/*all.jar
+web: java -jar -Dhttp.port=$PORT build/libs/*all.jar
